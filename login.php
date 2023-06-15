@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Verifica se o login e a senha estão corretos (você pode substituir essa lógica pelo seu sistema de autenticação)
-    if ($username === 'admin' && $password === 'senha123') {
+    if ($username === 'admin' && $password === 'senha') {
         // Autenticação bem-sucedida, define a sessão como autenticada
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if (isset($error)): ?>
         <div><?php echo $error; ?></div>
     <?php endif; ?>
+    
     <form method="post" action="">
         <label for="username">Usuário:</label>
         <input type="text" id="username" name="username"><br><br>
@@ -41,6 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="submit" value="Entrar">
     </form>
     <br>
-    <a href="registro.php">Cadastrar</a>
+    
 </body>
 </html>

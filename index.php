@@ -19,7 +19,7 @@ $users = isset($_SESSION['users']) ? $_SESSION['users'] : array();
 </head>
 <body>
     <h1>Lista de Usuários</h1>
-    <a href="logout.php">Sair</a>
+    <button><a href="logout.php">Sair</a></button> 
 
     <table>
         <tr>
@@ -39,5 +39,6 @@ $users = isset($_SESSION['users']) ? $_SESSION['users'] : array();
             </tr>
         <?php endforeach; ?>
     </table>
+    <button type="button"><a href="registro.php">Cadastrar</a></button> 
 </body>
 </html>
